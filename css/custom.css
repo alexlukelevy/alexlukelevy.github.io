@@ -1,0 +1,14 @@
+.page-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.social {
+  text-align: center;
+}
+
+.social a {
+  padding-left: 10px;
+  padding-right: 10px;	
+}
