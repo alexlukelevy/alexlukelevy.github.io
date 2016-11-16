@@ -6,6 +6,7 @@ description: >
 
 baseurl: ""
 url: "http://alexlevy.co.uk"
+permalink: none
 github_username:  alexlukelevy
 linkedin_username: alex-levy-73b0552b
 repository: alexlukelevy/alexlukelevy.github.io

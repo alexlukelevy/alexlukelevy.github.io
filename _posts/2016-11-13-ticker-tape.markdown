@@ -2,14 +2,17 @@
 layout: post
 title:  "Ticker Tape: Raspberry Pi meets Bloomberg"
 date:   2016-11-13 15:26:00 +0000
+categories: experiments
 ---
 
-**tl;dr - Introducing [ticker-tape](https://github.com/alexlukelevy/tickertape), a Python library for Raspberry Pi that prints scrolling news to an LED matrix.
+**tl;dr** - Introducing [ticker-tape](https://github.com/alexlukelevy/ticker-tape), a Python library for Raspberry Pi that prints scrolling news to an LED matrix.
+
+![Cover](/img/ticker-tape-cover.jpg)
 
 ### Concept
 Last Christmas my friends were kind enough to buy me a Raspberry Pi B+. Eager to get tinkering, I starting thinking of interesting projects right away. I was hoping to think of something that would give me some direct exposure to the hardware of the Pi but would also make my life marginally better in some way.
 
-Staring at stock price ticker scrolling by at work one day, I thought wouldn't it be cool if I could make my own one of these and print whatever I wanted on there. This seemed like it would incorporate a good mix of hardware and software, so I ran with the idea and started researching.
+Staring at a stock price ticker scrolling by at work one day, I thought 'wouldn't it be cool if I could make my own one of these and print whatever I wanted on there'. This seemed like it would incorporate a good mix of hardware and software, so I ran with the idea and started researching.
 
 ### Setup
 First of all I had to get my hands on a display. Luckily I was not the only one in the world trying to control an LED matrix from a Raspberry Pi, so I headed over to [Adafruit](https://www.adafruit.com/) and purchased the following items:
@@ -23,6 +26,8 @@ Now that I had all the hardware I needed, the fiddly stage of wiring everything 
 
 Following the excellent wiring guide [here](https://github.com/hzeller/rpi-rgb-led-matrix/blob/master/wiring.md), I managed to successfully connect my matrix and run the basic demo.
 
+![Wired](/img/ticker-tape-wiring.jpg)
+
 ### Ticker Tape
 With the perils of physical labour out of the way, I could concentrate on writing the software. I decided on Python as my language of choice as it seemed like a good fit for the problem and I was keen to improve my skills.
 
@@ -31,7 +36,7 @@ I drew up a high-level design for the software components which would allow for 
 * `FeedHandler`: consumes news events from a given source (e.g. BBC) and publishes `FeedEvents` to the `Reporter`
 * `Reporter`: responsible for keeping track of all the latest `FeedEvents` from various sources and reporting the events to the `Tape` when requested
 * `Tape`:  represents the LED matrix and contains the logic to convert a string to an LED output
-* `Director`: oversees the whole operation and coordinates the threads of the `FeedHandlers` and the `Reporter`
+* `Director`: oversees the whole operation and coordinates the tehreads of the `FeedHandlers` and the `Reporter`
 
 Being a big TDD fan, I jumped straight in with some `nosetests` and started building a BBC news `FeedHandler`. The BBC publish an [RSS feed](http://feeds.bbci.co.uk/news/rss.xml) of their latest news stories and with the help of the Python [feedparser](https://pypi.python.org/pypi/feedparser) library, I was able to pull them out with relative ease.
 
@@ -47,6 +52,7 @@ This command would allow all registered `FeedHandlers` to refresh and publish ne
 
 Finally, adding some `cron` to the mix and I'm now able to wake up to the blinking green headlines of Donald Trump's presidential campaign. So I'll let you decide whether this has improved my life...
 
+![Demo](/img/ticker-tape-demo.gif){: .center-image }
 
 ### Further work
 Like all software projects, the code is never really finished. Below are a few of the bits I'd like to add in the coming months:
@@ -57,4 +63,4 @@ Like all software projects, the code is never really finished. Below are a few o
 * Create a `FeedConfiguration` class to allow you to finely tune the display options of a `FeedEvent`
 
 ### Contributing
-[ticker-tape](https://github.com/alexlukelevy/tickertape) is open-source library, so if you wish to make use of or extend the library please do so on GitHub!
+[ticker-tape](https://github.com/alexlukelevy/ticker-tape) is open-source library, so if you wish to make use of or extend the library please do so on GitHub!e
