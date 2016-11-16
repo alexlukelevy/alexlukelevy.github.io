@@ -13,3 +13,8 @@
   padding-left: 10px;
   padding-right: 10px;	
 }
+
+.center-image {
+    margin: 0 auto;
+    display: block;
+}
