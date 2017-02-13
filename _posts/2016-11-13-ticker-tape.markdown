@@ -12,7 +12,7 @@ categories: experiments
 ### Concept
 Last Christmas my friends were kind enough to buy me a Raspberry Pi B+. Eager to get tinkering, I starting thinking of interesting projects right away. I was hoping to think of something that would give me some direct exposure to the hardware of the Pi but would also make my life marginally better in some way.
 
-Staring at a stock price ticker scrolling by at work one day, I thought 'wouldn't it be cool if I could make my own one of these and print whatever I wanted on there'. This seemed like it would incorporate a good mix of hardware and software, so I ran with the idea and started researching.
+Staring at a stock price ticker scrolling by at work, I thought 'wouldn't it be cool if I could make my own one of these and print whatever I wanted on there?'. This seemed like it would incorporate a good mix of hardware and software, so I ran with the idea and started researching.
 
 ### Setup
 First of all I had to get my hands on a display. Luckily I was not the only one in the world trying to control an LED matrix from a Raspberry Pi, so I headed over to [Adafruit](https://www.adafruit.com/) and purchased the following items:
@@ -22,7 +22,7 @@ First of all I had to get my hands on a display. Luckily I was not the only one 
 * [Power supply](https://www.adafruit.com/products/276)
 * [Power adapter](https://www.adafruit.com/products/368)
 
-Now that I had all the hardware I needed, the fiddly stage of wiring everything together was up next. Given my admittedly weak electronics knowledge I wasn't sure how much further I was going to get, so like all good software enginners I turned to Google for help. Fortunately I stumbled across an excellent [Raspberry Pi](https://github.com/hzeller/rpi-rgb-led-matrix) library from hzeller. hzeller has created a C++ library that allows you to print all sorts of things to an RGB LED matrix and comes with selection of bindings for different languages.
+Now that I had all the hardware I needed, the fiddly stage of wiring everything together was up next. Given my admittedly weak electronics knowledge I wasn't sure how much further I was going to get, so like all good software engineers I turned to Google for help. Fortunately I stumbled across an excellent [Raspberry Pi](https://github.com/hzeller/rpi-rgb-led-matrix) library from hzeller. hzeller has created a C++ library that allows you to print all sorts of things to an RGB LED matrix and comes with selection of bindings for different languages.
 
 Following the excellent wiring guide [here](https://github.com/hzeller/rpi-rgb-led-matrix/blob/master/wiring.md), I managed to successfully connect my matrix and run the basic demo.
 
@@ -36,7 +36,7 @@ I drew up a high-level design for the software components which would allow for 
 * `FeedHandler`: consumes news events from a given source (e.g. BBC) and publishes `FeedEvents` to the `Reporter`
 * `Reporter`: responsible for keeping track of all the latest `FeedEvents` from various sources and reporting the events to the `Tape` when requested
 * `Tape`:  represents the LED matrix and contains the logic to convert a string to an LED output
-* `Director`: oversees the whole operation and coordinates the tehreads of the `FeedHandlers` and the `Reporter`
+* `Director`: oversees the whole operation and coordinates the threads of the `FeedHandlers` and the `Reporter`
 
 Being a big TDD fan, I jumped straight in with some `nosetests` and started building a BBC news `FeedHandler`. The BBC publish an [RSS feed](http://feeds.bbci.co.uk/news/rss.xml) of their latest news stories and with the help of the Python [feedparser](https://pypi.python.org/pypi/feedparser) library, I was able to pull them out with relative ease.
 
