@@ -63,4 +63,4 @@ Like all software projects, the code is never really finished. Below are a few o
 * Create a `FeedConfiguration` class to allow you to finely tune the display options of a `FeedEvent`
 
 ### Contributing
-[ticker-tape](https://github.com/alexlukelevy/ticker-tape) is open-source library, so if you wish to make use of or extend the library please do so on GitHub!e
+[ticker-tape](https://github.com/alexlukelevy/ticker-tape) is open-source library, so if you wish to make use of or extend the library please do so on GitHub!
