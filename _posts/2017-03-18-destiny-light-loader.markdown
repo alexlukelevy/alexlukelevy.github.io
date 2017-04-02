@@ -3,6 +3,7 @@ layout: post
 title:  "Destiny Light Loader"
 date:   2017-03-16 11:58:00 +0000
 categories: experiments
+comments: true
 ---
 
 **tldr;** [destiny-light-loader](https://github.com/alexlukelevy/destiny-light-loader) is an experimental application created to explore Bungie's public Destiny REST API.
