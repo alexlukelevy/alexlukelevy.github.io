@@ -3,6 +3,7 @@ layout: post
 title:  "Ticker Tape: Raspberry Pi meets Bloomberg"
 date:   2016-11-13 15:26:00 +0000
 categories: experiments
+comments: true
 ---
 
 **tl;dr** - Introducing [ticker-tape](https://github.com/alexlukelevy/ticker-tape), a Python library for Raspberry Pi that prints scrolling news to an LED matrix.
