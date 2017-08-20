@@ -30,6 +30,10 @@ Extension methods in C# are also a nice feature but I believe they should be use
 ### Ecosystem
 One of the things I initially loved about Java was the huge community; both in terms of open-source and learning resources. I believe the cross-platform nature, accessibility of the language and free tooling around Java really helped to push it to such a high level. When I started learning C# I found online learning resources pretty useful, but a great deal of the open-source software I came across was simply a less well maintained Java port. Saying that, things do seem to have a gotten a little better in recent years and .NET Core will no doubt help with mainstream adoption and bolstering of the community. Back when it launched, the inability to officially run C# on Linux in production was a deal breaker for many people, so it's great to see Microsoft now supporting this with .NET Core.
 
+![StackOverflow feedback events](/img/top-tech-stackoverflow.png)
+
+###### Number of [feedback events on StackOverflow](https://insights.stackoverflow.com/survey/2016#technology-top-tech-on-stack-overflow) in January 2016.
+
 When it comes to tooling, I think Java is quite considerably ahead of C#. I am admittedly a huge JetBrains fanboy, but Visual Studio is nowhere near as good of an IDE as IntelliJ in my opinion (I could probably write a whole post about this). The fact that VS is verging on unusable without ReSharper (a JetBrains plugin) somewhat speaks for itself. With the announcement of .NET Core, JetBrains have decided to build a standalone C# IDE called Project Rider, so there's still hope yet! I imagine as time goes on things will level out between the Java and C# ecosystem, but for now Java wins this one.
 
 ### Future
