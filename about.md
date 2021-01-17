@@ -4,6 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I'm Alex, a 27 year old software developer from London. I love all things Web and have an unhealthy appetite for code quality.
-
-When I'm not programming I'm busy trying to become the next Tony Hawk.
+I'm Alex, a 29 year old full-stack software developer from London. When I'm not programming I'm busy trying to become the next Tony Hawk.
