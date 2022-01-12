@@ -4,6 +4,7 @@ title:  "I quit."
 date:   2018-01-27 16:47:00 +0000
 categories: thoughts
 comments: true
+published: false
 ---
 
 2017 was a roller coaster of a year for me. I had some huge changes in both my work and personal life, all of which led me to question the path I was going down.
